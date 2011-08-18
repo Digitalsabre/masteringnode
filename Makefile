@@ -1,4 +1,3 @@
-
 PDF_FLAGS = --fontsize 9.0 \
 			--linkstyle plain \
 			--linkcolor green \
@@ -52,7 +51,9 @@ book.epub:
 		--no-default-epub-cover \
 		--authors "TJ Holowaychuk" \
 		--language en \
-		--cover pages/cover.jpg
+		--cover pages/cover.jpg \
+		--level1-toc "//*h:h1" \
+		--level2-toc "//*h:h2"
 
 view: book.pdf
 	open book.pdf
